@@ -7,9 +7,6 @@ namespace OgameLike.Models.BO
 {
     public abstract class ResourceGenerator:Building
     {
-        public List<Resource> ResourceBySecond()
-        {
-            return null;
-        }
+        public List<Resource> ResourceBySecond { get => new List<Resource>(); }
     }
 }

@@ -25,10 +25,7 @@ namespace OgameLike.Models.BO
         [MinValueValidator(minValue = 0)]
         public int? lastQuantity
         {
-            get
-            {
-                return lastQuantity;
-            }
+            get=>lastQuantity;
             set
             {
                 if (value >= 0)
@@ -40,10 +37,7 @@ namespace OgameLike.Models.BO
 
         [AfterCurrentDateValidator()]
         public DateTime lastUpdate {
-            get 
-            {
-                return lastUpdate;
-            }
+            get => lastUpdate;
             set 
             {
                 if (value >= DateTime.Now)

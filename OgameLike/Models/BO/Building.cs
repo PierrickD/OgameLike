@@ -15,10 +15,7 @@ namespace OgameLike.Models.BO
 
         [MinValueValidator(minValue = 0)]
         public int? level { 
-            get 
-            {
-                return level;
-            } 
+            get => level;
             set 
             {
                 if (value >= 0)
@@ -29,19 +26,11 @@ namespace OgameLike.Models.BO
         }
         public long? id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public int? CellNb()
-        {
-            return 0;
-        }
+        public int? CellNb { get => null; }
+        
 
-        public List<Resource> TotalCost()
-        {
-            return null;
-        }
+        public List<Resource> TotalCost { get => new List<Resource>(); }
 
-        public List<Resource> NextCost()
-        {
-            return null;
-        }
+        public List<Resource> NextCost {get => new List<Resource>(); }
     }
 }

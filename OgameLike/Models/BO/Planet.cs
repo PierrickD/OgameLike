@@ -26,10 +26,7 @@ namespace OgameLike.Models.BO
 
         [MinValueValidator(minValue=0)]
         public int? caseNb {
-            get 
-            { 
-                return caseNb; 
-            } 
+            get => caseNb; 
             set 
             {
                 if (value >= 0)
