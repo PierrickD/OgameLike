@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OgameLike.Models.BO
 {
-    public class ResourceGenerator:Building
+    public abstract class ResourceGenerator:Building
     {
         public List<Resource> ResourceBySecond()
         {

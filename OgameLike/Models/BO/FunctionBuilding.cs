@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OgameLike.Models.BO
 {
-    public class FunctionBuilding: Building
+    public abstract class FunctionBuilding: Building
     {
         public List<Action> Actions()
         {
