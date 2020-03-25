@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using OgameLike.Models.Validator;
 using System.Linq;
 using System.Web;
 
@@ -19,9 +21,25 @@ namespace OgameLike.Models.BO
 
         public long? id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        [MinLength(5), MaxLength(20)]
         public String name { get; set; }
-        public int? caseNb { get; set; }
 
+        [MinValueValidator(minValue=0)]
+        public int? caseNb {
+            get 
+            { 
+                return caseNb; 
+            } 
+            set 
+            {
+                if (value >= 0)
+                {
+                    caseNb = value;
+                }
+            } 
+        }
+
+        [MaxLength(4)]
         public List<Resource> ressourcesList { get; set; }
 
         public List<Building> buildingsList { get; set; }

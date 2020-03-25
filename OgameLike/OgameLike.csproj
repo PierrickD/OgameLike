@@ -127,10 +127,13 @@
     <Compile Include="Models\BO\Building.cs" />
     <Compile Include="Models\BO\FunctionBuilding.cs" />
     <Compile Include="Models\BO\IDbEntity.cs" />
+    <Compile Include="Models\Validator\MaxValueValidator.cs" />
+    <Compile Include="Models\Validator\AfterCurrentDateValidator.cs" />
     <Compile Include="Models\BO\Planet.cs" />
     <Compile Include="Models\BO\Resource.cs" />
     <Compile Include="Models\BO\ResourceGenerator.cs" />
     <Compile Include="Models\BO\SolarSystem.cs" />
+    <Compile Include="Models\Validator\MinValueValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

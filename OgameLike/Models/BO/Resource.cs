@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+
+using OgameLike.Models.Validator;
 
 namespace OgameLike.Models.BO
 {
@@ -16,9 +19,39 @@ namespace OgameLike.Models.BO
         }
         public long? id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        [MinLength(5), MaxLength(20)]
         public String name { get; set; }
-        public int? lastQuantity { get; set; }
-        public DateTime lastUpdate { get; set; }
+
+        [MinValueValidator(minValue = 0)]
+        public int? lastQuantity
+        {
+            get
+            {
+                return lastQuantity;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    lastQuantity = value;
+                }
+            }
+        }
+
+        [AfterCurrentDateValidator()]
+        public DateTime lastUpdate {
+            get 
+            {
+                return lastUpdate;
+            }
+            set 
+            {
+                if (value >= DateTime.Now)
+                {
+                    lastUpdate = value;
+                }
+            } 
+        }
 
         public DateTime currentDate()
         {
