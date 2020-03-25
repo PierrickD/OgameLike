@@ -124,6 +124,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BO\Building.cs" />
+    <Compile Include="Models\BO\FunctionBuilding.cs" />
+    <Compile Include="Models\BO\IDbEntity.cs" />
+    <Compile Include="Models\BO\Planet.cs" />
+    <Compile Include="Models\BO\Resource.cs" />
+    <Compile Include="Models\BO\ResourceGenerator.cs" />
+    <Compile Include="Models\BO\SolarSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,7 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
